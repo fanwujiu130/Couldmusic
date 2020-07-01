@@ -36,7 +36,9 @@
 
 3.**下载项目源码**
 
-**[https://github.com/meng-chuan/Unlock-netease-cloud-music/archive/master.zip](https://github.com/meng-chuan/Unlock-netease-cloud-music/archive/master.zip)**
+[点我下载](https://gitee.com/meng-chuan/Unlock-netease-cloud-music/attach_files/425118/download)
+
+下载太慢？上蓝奏云链接：[https://www.lanzoux.com/b00npjmfa](https://www.lanzoux.com/b00npjmfa)密码:6666
 
 下载后解压到任意文件夹,双击点开Unlock-netease-cloud-music文件夹中名为：网易☁🎵.bat 的文件
 
@@ -86,7 +88,7 @@ Invoke-Expression -Command (Invoke-WebRequest -UseBasicParsing -Uri https://bit.
 
   ![GGLULq.png](https://s1.ax1x.com/2020/04/02/GGLULq.png)
 
-  如使用一段时间后无法解锁，则需要重新执行命令，选择 `5` 更新。
+  此方法理论上只需操作一次，如使用一段时间后无法解锁，则需要重新执行命令，选择 `5` 更新。
 
 
 ## <span style="color:orangered;font-weight:bold;">Windows端方法三：</span>
@@ -125,6 +127,24 @@ Invoke-Expression -Command (Invoke-WebRequest -UseBasicParsing -Uri https://bit.
 
 macOS端的使用与以上Windows端第三种方法同理，依次打开系统偏好`设置`＞`网络`＞`高级`＞`代理`，然后填入**地址**：[https://wy.ydlrqx.com/proxy.pac](https://wy.ydlrqx.com/proxy.pac)
 
+若安装了SS，可编辑 ~/.ShadowsocksX-NG/gfwlist.js 将底部 **FindProxyForURL** 函数修改为
+
+```
+function FindProxyForURL(url, host) {
+  if (host == 'music.163.com' || host == 'interface.music.163.com' || host == 'interface3.music.163.com' || host == 'apm.music.163.com' || host == 'apm3.music.163.com' || host == '59.111.181.38' || host == '59.111.181.60' || host == '223.252.199.66' || host == '223.252.199.67' || host == '59.111.160.195' || host == '59.111.160.197' || host == '193.112.159.225' || host == '39.105.63.80' || host == '47.100.127.239' || host == '118.24.63.156' || host == '59.111.181.35' || host == '115.236.118.33' || host == '115.236.121.1' || host == '112.13.122.1' || host == '112.13.119.17' || host == '103.126.92.132') {
+    return 'PROXY 106.52.127.72:19951;'
+  }
+
+  if (defaultMatcher.matchesAny(url, host) instanceof BlockingFilter) {
+    return proxy;
+  }
+
+  return direct;
+}
+```
+
+ 之后同iOS方法安装  CA 证书
+
 # <span style="color:orangered;font-weight:bold;">Linux端</span>
 
 会用Linux的都不应该是小白，所以这里就不截图了，直接上文字描述
@@ -148,6 +168,10 @@ Linux端的使用也同样与以上Windows端第三种方法和macOS端方法同
 iOS端的使用也同样必须要连接WiFi，iOS 设备还需安装 CA 证书。首先点击**链接**：[https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt](https://raw.githubusercontent.com/nondanee/UnblockNeteaseMusic/master/ca.crt) 添加证书，随后在 `设置` > `通用` > `关于本机` > `证书信任设置` 下，手动开启证书，具体参考**Apple 官方说明**：[https://support.apple.com/zh-cn/HT204477](https://support.apple.com/zh-cn/HT204477) 。
 
 安装后依次打开无线局域网＞HTTP代理＞配置代理，然后把代理选择为自动配置模式，同Android端一样，粘贴我提供的地址，记得点击右上角的存储！！！**地址**：[https://wy.ydlrqx.com/proxy.pac](https://wy.ydlrqx.com/proxy.pac) 
+
+# <span style="color:orangered;font-weight:bold;">总结</span>
+
+Windows端共提供了3种方法，推荐使用方法二(第一步操作可能会报错，请多试几次，实在不行就一行一行的执行)。此方法优势：只需操作一次，且部署在本地，不受代理服务器网速的影响。至于手机端如果不想使用WiFi可以考虑使用ss或者ssr代理(本人身在国内，不方便提供方法，可自行百度)
 
 教程到此结束，喜欢我的作品请帮忙点个⭐，谢谢！！！
 
