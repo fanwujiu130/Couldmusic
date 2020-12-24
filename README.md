@@ -16,7 +16,7 @@
 - 为请求增加 `X-Real-IP` 参数解锁海外限制，支持指定网易云服务器 IP，支持设置上游 HTTP / HTTPS 代理
 - 完整的流量代理功能 (HTTP / HTTPS)，可直接作为系统代理 (同时支持 PAC)
 
-## <span style="color:orangered;font-weight:bold;">Windows端方法一：</span>
+# <span style="color:orangered;font-weight:bold;">Windows端方法一：</span>
 
 1.打开网易云音乐客户端，进入设置页面，设置自定义代理
 
@@ -91,7 +91,7 @@ Invoke-Expression -Command (Invoke-WebRequest -UseBasicParsing -Uri https://bit.
   如使用一段时间后无法解锁，则需要重新执行命令，选择 `5` 更新。
 
 
-## <span style="color:orangered;font-weight:bold;">Windows端方法三：</span>
+# <span style="color:orangered;font-weight:bold;">Windows端方法三：</span>
 
 优点：无需下载任何资源，只需几步设置即可，话不多说，直接上干活，我这里以win10为例，其他系统操作类似：
 
@@ -232,7 +232,7 @@ https://github.com/ndroi/easy163
 
 感谢大佬们默默无闻的付出，在下只是大自然的搬运工
 
-## 本教程仅用于学习交流，如有侵权请联系本人删除，禁止他人用于非法用途，转载请注明出处，谢谢！！！
+# 本教程仅用于学习交流，如有侵权请联系本人删除，禁止他人用于非法用途，转载请注明出处，谢谢！！！
 
 **注：本人GitHub项目地址**：https://github.com/meng-chuan/Unlock-netease-cloud-music
 
